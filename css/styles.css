@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container{
+    position: relative;
+    /* height: 100vh; */
+
+  }
+  .video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .video-container video{
+    position: relative;
+    /* top: 50%;
+    left: 50%; */
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    /* transform: translate(-50%,50%); */
+  }
+
+  /*NAVBAR*/
+
+.label-menu {
+    width: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .burger-line {
+    width: 25px;
+    height: 3px;
+    
+    position: relative;
+   
+    
+  }
+  .label-menu:hover {
+    cursor: pointer;
+  }
+  
+  .input-check:checked ~ .main-nav {
+    .nav-list {
+      background-color: var(--light-transparency);
+      position: fixed;
+      left: 0;
+      top: 100px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+      width: 200px;
+      height: 350px;
+      margin: 0;
+      transition: all 0.4s ease-in-out;   
+       
+    }
+    .admin{
+      display: none
+    }
+  }
+  
+  .nav-item:hover {
+    text-decoration: underline;
+  }
+  
+  .input-check {   
+    display: none;
+  }
+  
+  .main-header {
+    width: 100%;
+    display: flex;
+    height: 100px;
+    font-size: 25px;
+    background-color: var(--primary-color-transp);
+    position: relative;
+    z-index: 1;
+    
+  }
+  .main-nav {
+    display: flex;
+    padding: 2rem;
+    text-align: center;
+    justify-content: center;
+    
+    
+    
+  
+  }
+  @media screen and (min-width: 768px) {
+    .main-nav{
+      flex-grow: 1;
+    }
+  }
+  .nav-list {
+    margin-left: 2rem;
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    align-items: center;
+    color: black;
+    font-weight: 300;
+    text-decoration: none;
+  }
+  .nav-link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-list {
+        display: none;
+    }
+  
+    .main-nav {
+        display: flex;
+        justify-content: flex-start;
+    }
+  
+    .main-header {
+        font-size: 18px;
+    }
+  }
+  
+  .user-admin{
+    height: auto;
+    width: 500px;
+    display:flex;
+    justify-content: center;
+    padding: 1rem;
+    
+  }
+  .user-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 2rem;
+    padding: 1rem;
+   
+  }
+  .user-menu:hover {
+    cursor: pointer;
+  }
+  .nav-logo {
+    width: 70px;
+    height: 70px;
+    transform: translateY(-50%);
+    
+  
+  }
+  .cart-shopping,
+  .user{
+    background-image: linear-gradient(45deg, rgba(210, 255, 82, 1) 0%, rgba(210, 255, 82, 1) 42%, rgba(145, 232, 66, 1) 71%, rgba(145, 232, 66, 1) 100%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    font-size: 20px;
+    padding: 1rem;
+  }
+  .user{
+  margin-left: 1rem;
+  }
+  .user-profile-picture{
+   width: 60px;
+   height:60px;
+   border-radius: 50%;
+  }
+  
+  @media (max-width: 768px) {
+    .main-banner {
+      height: 300px;
+    }
+  }
+  
+  /*NAVBAR END*/
+
+  .welcome-container {
+    border-radius: 10px;
+    text-align: center;
+    /* width: 100%;
+    height: 100%; */
+    color: white;
+  }
+
+  .server-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .join-message {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .unity-message {
+    font-size: 20px;
+    font-style: italic;
+  }
+
+  .line-feature {
+    margin-top: 2rem;
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    position: relative;
+}
+
+  /*FOOTER*/
+
+  .main-footer {
+    width: 100%;
+    display: flex;
+    padding-top: 1.5rem;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  .footer-section {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer-logo {
+    width: 120px;
+    height: 120px;
+  }
+  .fa-brands {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .footer-list {
+    list-style-type: none;
+  }
+  
+  .link-footer {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .footer-phone {
+    color: white;
+    font-size: 1.1rem;
+  }
+  .phone-description {
+    margin-top: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
+  }
+
+  /*hr*/
+
+    hr {
+        width: 70%;
+        height: 3px;
+        background-color: orangered;
+        margin: 3rem auto;
+        border: none;
+        border-radius: 50% 80% 50% 80%;
+        box-shadow: 0 0 5px 1px white;
+        content: "";
+        animation-name: border-move;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+
+
+@keyframes border-move {
+    0% {
+        width: 0;
+        background-color: white;
+    }
+
+    50% {
+        background-color: orangered;
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+        background-color: orange;
+    }
+}
+
+@keyframes border-footer {
+    0% {
+        height: 0;
+        background-color: var(--primary-color-dark);
+    }
+
+    50% {
+        background-color: var(--primary-color);
+        height: 85%;
+    }
+
+    100% {
+        height: 0%;
+        background-color: var(--primary-color-dark);
+    }
+}
+
+/*HR END*/
+
+/*DERECHOS RESERVADOS*/
+
+.derechos-reservados h3{
+    text-align: center;
+    color: white;
+    padding: 1rem; 
+}
+/*DERECHOS RESERVADOS END*/
+
+/* FEATURE*/
+
+.feature-section {
+  display: flex;
+}
+.feature-section .feature {
+  padding: 3rem 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  cursor: pointer;
+  color: white;
+
+}
+
+/*seccion info*/
+.tittle-section-info {
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+}
+
+.main-table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 3.5rem auto 2.5rem;
+  color: white;
+}
+
+
+
+.main-table thead tr {
+  color: white;
+}
+
+.main-table th,
+.main-table td {
+  padding: 0.5rem 1rem;
+  border: 1px solid;
+  background: -webkit-linear-gradient(45deg, white, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: white;
+  text-align: center;
+}
+
+.info-server h2{
+  color:white;
+  text-align: center;
+}
+
+/*seccion info end*/
